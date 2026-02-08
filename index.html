@@ -40,9 +40,15 @@ border-radius:10px;
 
 <body>
 
-<audio autoplay loop>
-<source src="arz_kiya_hai.mp3" type="audio/mpeg">
+<audio id="bgmusic" loop>
+  <source src="arz_kiya_hai.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+document.addEventListener("click", function() {
+  document.getElementById("bgmusic").play();
+});
+</script>
 
 <<img src="photo.jpg.png">width="250"><br>
 
@@ -75,3 +81,4 @@ document.body.appendChild(h);
 </body>
 
 </html>
+
