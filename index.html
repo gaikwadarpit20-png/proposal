@@ -39,12 +39,23 @@ border-radius:10px;
 </head>
 
 <body>
+<div id="tapStart" style="position:fixed;top:0;left:0;width:100%;height:100%;background:black;color:white;display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;">
+  Tap anywhere to start ❤️
+</div>
 
 <audio id="bgmusic" loop>
   <source src="arz_kiya_hai.mp3" type="audio/mpeg">
 </audio>
 
 <script>
+document.getElementById("tapStart").addEventListener("click", function() {
+  document.getElementById("bgmusic").play();
+  this.style.display = "none"; // remove the overlay
+});
+</script>
+
+
+
 document.addEventListener("click", function() {
   document.getElementById("bgmusic").play();
 });
@@ -81,4 +92,5 @@ document.body.appendChild(h);
 </body>
 
 </html>
+
 
