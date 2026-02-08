@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Sudhiksha ❤️</title>
+
+<style>
+body{
+background:black;
+color:white;
+text-align:center;
+font-family:Arial;
+overflow:hidden;
+}
+
+h1{margin-top:40px;}
+
+.heart{
+position:fixed;
+color:red;
+animation: float 6s linear infinite;
+}
+@keyframes float{
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-10vh);}
+}
+
+button{
+padding:15px 30px;
+font-size:20px;
+margin:10px;
+border:none;
+border-radius:10px;
+}
+
+#yes{background:#ff2e63;color:white;}
+#no{background:gray;color:white;position:absolute;}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+<source src="arz_kiya_hai.mp3" type="audio/mpeg">
+</audio>
+
+<img src="photo.jpg" width="250"><br>
+
+<h1>Sudhiksha Will You Marry Me?</h1>
+
+<button id="yes" onclick="yes()">YES</button>
+<button id="no">NO</button>
+
+<script>
+function yes(){
+document.body.innerHTML="<h1 style='font-size:60px'>She Said YES 💍</h1>\
+<img src='https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif'>";
+}
+
+const no=document.getElementById("no");
+no.addEventListener("mouseover",()=>{
+no.style.left=Math.random()*80+"%";
+no.style.top=Math.random()*80+"%";
+});
+
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"%";
+document.body.appendChild(h);
+},500);
+</script>
+
+</body>
+</html>
